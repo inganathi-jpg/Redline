@@ -1,0 +1,442 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: black;
+  color: white;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px;
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  letter-spacing: 3px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+  max-width: 600px;
+}
+
+.hero-content h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 72px;
+  line-height: 1;
+}
+
+.hero-content p {
+  margin: 20px 0;
+  color: #ddd;
+}
+
+.btn {
+  background: red;
+  color: white;
+  padding: 14px 36px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid red;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+}
+
+/* ================= INFO SECTIONS ================= */
+.info {
+  padding: 80px 60px;
+}
+
+.info.dark {
+  background: #0a0a0a;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.info p,
+.info li {
+  color: #ccc;
+  line-height: 1.7;
+}
+
+.info ul {
+  margin: 15px 0 30px 20px;
+}
+
+/* ===== SPECIAL BANNER ===== */
+.special-banner {
+  background: red;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ===== SEARCH ===== */
+.search-container {
+  padding: 15px;
+  background: #595959;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* ================= SHOP ================= */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.product {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #222;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 15px 0;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+}
+
+.product .price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product select {
+  margin-bottom: 10px;
+  padding: 6px;
+  width: 60%;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background: #0e0e0e;
+  color: white;
+}
+
+/* Add to Order buttons */
+.product button {
+  background: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.product button:hover {
+  background: white;
+  color: black;
+}
+
+/* ================= CART ================= */
+.cart {
+  margin-top: 50px;
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.cart h3 {
+  margin-bottom: 10px;
+}
+
+.cart ul {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.cart .deal {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  padding: 30px;
+  text-align: center;
+  color: #777;
+}
+
+/* ================= POPUPS ================= */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none; /* hidden initially */
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup {
+  background: #0e0e0e;
+  padding: 40px;
+  max-width: 600px;
+  position: relative;
+  border-radius: 12px;
+}
+
+.popup.small {
+  max-width: 420px;
+}
+
+.popup h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.popup p,
+.popup li {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.popup ol {
+  margin: 15px 0 15px 20px;
+}
+
+.note {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #777;
+}
+
+.close-popup:hover {
+  color: red;
+}
+/* ================= SEARCH BAR ================= */
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 14px 18px;
+  margin: 30px 0;
+  background: #0e0e0e;
+  border: 1px solid #505050;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.search-bar::placeholder {
+  color: #ff0000;
+}
+
+/* ================= RESPONSIVE GRID ================= */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ================= PRODUCT ================= */
+.product {
+  background: #111;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid #222;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-6px);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.product h3 {
+  margin: 15px 0 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+}
+
+/* Add to Order button */
+.product button {
+  background: red;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.product button:hover {
+  background: white;
+  color: black;
+}
+
+/* ================= CART ================= */
+.cart {
+  margin-top: 60px;
+  background: #111;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.cart ul {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero-content h2 {
+    font-size: 48px;
+  }
+
+  .info {
+    padding: 50px 20px;
+  }
+}
+
+/* ================= TABLETS ================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-content h2 {
+    font-size: 60px;
+  }
+}
+.deal-banner {
+  background: #0a0a0a;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  padding: 50px 40px;
+  text-align: center;
+}
+
+.deal-banner h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.deal-lead {
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.deal-details {
+  max-width: 420px;
+  margin: 0 auto 25px;
+  text-align: left;
+}
+
+.deal-details p {
+  color: #ccc;
+  margin: 8px 0;
+}
+
+.deal-tagline {
+  color: red;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}

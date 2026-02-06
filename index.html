@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>REDLINE | Premium Reseller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= POLICY POPUP ================= -->
+<div id="policyPopup" class="popup-overlay">
+  <div class="popup small">
+    <h2>Policies & Cookies</h2>
+    <p>By using REDLINE, you agree to our store policies and the use of cookies to improve your experience.</p>
+
+    <h3>Refund Policy</h3>
+    <ul>
+      <li>Refunds if wrong item sent</li>
+      <li>Refunds if item damaged (reported within 24h)</li>
+      <li>Refunds if order cannot be fulfilled</li>
+    </ul>
+
+    <h3>No Refunds If:</h3>
+    <ul>
+      <li>Order already dispatched</li>
+      <li>Change of mind</li>
+      <li>Incorrect delivery info</li>
+      <li>Item used, worn, or tampered with</li>
+    </ul>
+
+    <div class="popup-actions">
+      <button id="acceptPolicy" class="btn">Accept</button>
+      <button id="declinePolicy" class="btn secondary">Decline</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PAYMENT POPUP ================= -->
+<div id="paymentPopup" class="popup-overlay">
+  <div class="popup">
+    <span class="close-popup" id="closePayment">&times;</span>
+    <h2>How Payment Works at REDLINE</h2>
+    <p>We currently use a manual payment process via WhatsApp to ensure accuracy.</p>
+    <ol>
+      <li>Place your order by selecting items and sizes</li>
+      <li>Your order details are sent to us</li>
+      <li>Redirected to WhatsApp to complete payment via EFT or PayShap</li>
+      <li>Once payment confirmed, order is prepared and dispatched</li>
+    </ol>
+    <p class="note">No payment required before placing an order.</p>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <video autoplay muted loop class="hero-video">
+  <source src="videos/WhatsApp Video 2026-02-05 at 20.59.32.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+  <div class="hero-overlay"></div>
+
+  <header class="navbar">
+    <h1 class="logo">REDLINE</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#refunds">Refunds</a>
+      <a href="#shop">Shop</a>
+    </nav>
+  </header>
+
+  <div class="hero-content">
+    <h2>Premium Street. Clean Luxury.</h2>
+    <p>Football tees, casual wear & fragrances.</p>
+    <a href="#shop" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="info">
+  <h2 class="section-title">About REDLINE</h2>
+     <p class="about-lead">
+    REDLINE is a South African lifestyle reseller based in <strong>Grahamstown</strong>,
+    focused on premium football jerseys, casual apparel, and signature fragrances.
+  </p>
+
+  <p>
+    We curate pieces that reflect modern street culture and football heritage,
+    offering products that look and feel premium without the inflated price tag.
+    Every item is selected with attention to detail, quality, and style.
+  </p>
+
+  <p class="about-tagline">
+    Premium style. Smart pricing. <strong>Accessible luxury.</strong>
+  </p>
+</section>
+<!-- ================= REFUND POLICY ================= -->
+<section id="refunds" class="info dark">
+  <h2 class="section-title">Refund Policy</h2>
+  <h4>Refunds will be issued if:</h4>
+  <ul>
+    <li>Wrong item sent</li>
+    <li>Item arrives damaged (reported within 24h)</li>
+    <li>Unable to fulfil order</li>
+  </ul>
+
+  <h4>Refunds will NOT be issued if:</h4>
+  <ul>
+    <li>Order already dispatched</li>
+    <li>Change of mind</li>
+    <li>Incorrect delivery details</li>
+    <li>Item used, worn, or tampered with</li>
+  </ul>
+</section>
+
+<!-- ===== SPECIAL ANNOUNCEMENT ===== -->
+<section class="deal-banner">
+  <h3>Exclusive Multi-Buy Special</h3>
+
+  <p class="deal-lead">
+    Don’t be left out on our limited REDLINE deals.
+    Buy more and unlock premium savings.
+  </p>
+
+  <div class="deal-details">
+    <p>• Single item: <strong>R550</strong></p>
+    <p>• Buy <strong>2 items</strong>: <strong>R850</strong></p>
+    <p>• Buy <strong>4 items</strong>: <strong>R1700</strong></p>
+    <p>• Even-number orders qualify automatically</p>
+    <p>• Odd-number orders receive bundle pricing plus one standard item</p>
+  </div>
+
+  <p class="deal-tagline">
+    Premium quality. Real value. <strong>Affordable luxury.</strong>
+  </p>
+</section>
+
+</section>
+
+<!-- ===== SEARCH BAR ===== -->
+<div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search jerseys..." />
+</div>
+<!-- ================= SHOP ================= -->
+<section id="shop" class="info">
+  <h2 class="section-title">Shop</h2>
+  <h3>FOOTBALL T-shirts</h3>
+
+  <div class="products">
+    <div class="product">
+      <img src="images/25_26 Chelsea nike Away Jersey - Mens.jpg" alt="Chelsea Away Jersey">
+      <h3>Chelsea 25/26 Away Jersey</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Chelsea 25/26 Away Jersey', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/2025-26 Manchester United adidas Third Shirt.jpg" alt="Man United Third Jersey">
+      <h3>Man United 25/26 Third Jersey</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Man United 25/26 Third Jersey', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Adidas Arsenal 25_26 Home Authentic Jersey In Red _ Editorialist.jpg" alt="Arsenal Home Jersey">
+      <h3>Arsenal 25/26 Home Authentic</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Arsenal 25/26 Home Authentic', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/adidas Arsenal Kids 2025_26 Third Replica Football Jersey.jpg" alt="Arsenal Third Jersey">
+      <h3>Arsenal Kids 25/26 Third</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Arsenal Kids 25/26 Third', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/adidas Performance LIVERPOOL FC 25_26 AWAY JERSEY AUTHENTIC - Football shirt - white.jpg" alt="Liverpool Away">
+      <h3>Liverpool 25/26 Away</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Liverpool 25/26 Away', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/barcelona nike 2025_2026.jpg" alt="Barcelona Jersey">
+      <h3>Barcelona 25/26</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Barcelona 25/26', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Buy adidas Bright Red Liverpool FC 25_26 Home Jersey.jpg" alt="Liverpool Home">
+      <h3>Liverpool 25/26 Home</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Liverpool 25/26 Home', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Camiseta adidas Manchester United Primera Equipación 2025-2026 Niño.jpg" alt="Man United Kids">
+      <h3>Man United Kids 25/26</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Man United Kids 25/26', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Chelsea  nike 25_26 Home Kit.jpg" alt="Chelsea Home">
+      <h3>Chelsea 25/26 Home</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Chelsea 25/26 Home', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Puma Manchester City Away Mens Short Sleeve Jersey 2025_2026 Size_ Small, Colour_ Black.jpg" alt="Man City Away">
+      <h3>Man City 25/26 Away</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Man City 25/26 Away', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Puma Manchester City Home Mens Short Sleeve Jersey 2025_2026 Size_ XXL, Colour_ Light Blue.jpg" alt="Man City Home">
+      <h3>Man City 25/26 Home</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Man City 25/26 Home', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Real Madrid adidas 2025_2026 white jersey.jpg" alt="Real Madrid Home">
+      <h3>Real Madrid 25/26 Home</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Real Madrid 25/26 Home', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/adidas Originals ORLANDO PIRATES 25_26 THIRD REPLICA JERSEY - Maillot de foot - blue dawn_light orchid.jpg" alt="Orlando Pirates Third">
+      <h3>Orlando Pirates 25/26 Third</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Orlando Pirates 25/26 Third', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/2025_26 - Kaizer Chiefs.jpg" alt="Kaizer Chiefs Home">
+      <h3>Kaizer Chiefs 25/26 Home</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Kaizer Chiefs 25/26 Home', this)">Add to Order</button>
+    </div>
+
+    <div class="product">
+      <img src="images/Orlando Pirates HOME JEREY 25_26.jpg" alt="Orlando Pirates Home">
+      <h3>Orlando Pirates 25/26 Home</h3>
+      <p class="price">R550</p>
+      <select>
+        <option value="">Select Size</option>
+        <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+      </select>
+      <button onclick="addToCart('Orlando Pirates 25/26 Home', this)">Add to Order</button>
+    </div>
+
+  </div>
+
+  <div class="cart">
+    <h3>Your Order</h3>
+    <ul id="cartItems"></ul>
+    <p id="totalPrice">Total: R0</p>
+    <p class="deal">Special: 2 for R850 · 4 for R1700</p>
+    <button onclick="checkout()" class="btn">Order via WhatsApp</button>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <p>© 2026 REDLINE. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
